@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: 00px 10px 4px #b5b5b9;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin: 5px;
+}
+.logo {
+  height: 35px;
+  margin-right: 35px;
+  margin-left: 155px;
+  cursor: pointer;
+}
+.header-text {
+  margin: 0px 15px 0px;
+  cursor: pointer;
+}

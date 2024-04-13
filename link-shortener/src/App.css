@@ -1,0 +1,52 @@
+body {
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.upper {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  margin: 125px 385px 0px;
+}
+.upper-left {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  width: 500px;
+}
+
+.upper-left h1 {
+  margin: 0px;
+}
+.get-started-btn {
+  background-color: #2ad1d4;
+  color: white;
+  border-radius: 25px;
+  width: 150px;
+}
+.working {
+  position: absolute;
+  width: 500px;
+  top: 100px;
+  left: 1300px;
+}
+.middle {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+.bg-shorten {
+  border-radius: 15px;
+  z-index: -5;
+  background-color: #3a3053;
+}
