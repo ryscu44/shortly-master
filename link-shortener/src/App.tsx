@@ -9,8 +9,27 @@ import facebookIcon from "../../images/icon-facebook.svg";
 import instagramIcon from "../../images/icon-instagram.svg";
 import pinterestIcon from "../../images/icon-pinterest.svg";
 import twitterIcon from "../../images/icon-twitter.svg";
+import { useState } from "react";
 
 function App() {
+  const [input, setInput] = useState("");
+  const encodedURI = encodeURI(input);
+
+  const handleSubmit = async () => {
+    fetch("https://cleanuri.com/api/v1/shorten", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: `url=${encodedURI}`,
+    });
+    try {
+      const response = await fetch("https://cleanuri.com/api/v1/shorten");
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -35,11 +54,15 @@ function App() {
           <div className="bg-shortendiv">
             <div className="input-container">
               <input
+                onChange={(e) => setInput(e.target.value)}
                 placeholder="Shorten a link here..."
                 className="shorten-input"
                 type="text"
+                value={input}
               />
-              <button className="shorten-btn">Shorten It!</button>
+              <button className="shorten-btn" onClick={handleSubmit}>
+                Shorten It!
+              </button>
             </div>
           </div>
         </div>

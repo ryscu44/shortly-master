@@ -44,12 +44,20 @@ body {
   align-items: center;
   justify-content: center;
   margin-bottom: 35px;
+  border-width: 0px;
+  border-color: #3a3052;
+
+}
+.get-started-btn:active {
+opacity: 0.5;
+border-width: 0px;
+border-color: #3a3052;
 }
 .working {
   position: absolute;
-  width: 600px;
-  top: 100px;
-  left: 1300px;
+  width: 800px;
+  top: 170px;
+  left: 1200px;
 }
 .middle {
   display: flex;
@@ -98,11 +106,17 @@ padding-left: 0px;
 .shorten-btn {
   background-color: #2ad1d4;
   color: white;
-  border-radius: 5px;
-  width: 150px;
+  border-radius: 8px;
+  width: 170px;
   margin-left: 15px;
+  font-weight: bold;
+  font-size: 18px;
 }
-
+.shorten-btn:active {
+  opacity: 0.5;
+border-width: 0px;
+border-color: #3a3052;
+}
 .lower {
   margin-top: 85px;
 }
@@ -170,7 +184,7 @@ padding-left: 0px;
   height: 10px;
   width: 40px;
   position: absolute;
-  top: 1500px;
+  top: 1560px;
   left: 795px;
   margin: 0px;
 }
@@ -179,7 +193,7 @@ padding-left: 0px;
   height: 10px;
   width: 40px;
   position: absolute;
-  top: 1500px;
+  top: 1560px;
   left: 1265px;
   margin: 0px;
 }
@@ -192,7 +206,7 @@ padding-left: 0px;
   justify-content: center;
   align-items: center;
   margin-top: 250px;
-  height: 250px;
+  height: 300px;
 }
 .lower-get-started h1 {
 color: white;
@@ -210,11 +224,16 @@ color: white;
   font-weight: bold;
   margin-bottom: 30px;
 }
+.lower-get-started-btn:active {
+  opacity: 0.5;
+border-width: 0px;
+border-color: #3a3052;
+}
 .footer {
   display: flex;
   color: white;
   height: 310px;
-  background-color: #232027;
+  background-color: #2a272e;
 }
 .footer img {
   padding: 75px 165px 0px;
@@ -231,6 +250,9 @@ color: white;
   padding: 0px;
   margin: 75px 10px;
   cursor: pointer;
+}
+.icons img:active {
+  color: #2ad1d4;
 }
 .footer-links-c {
   display: flex;
@@ -252,4 +274,7 @@ color: white;
 }
 .company-c {
   margin-right: 120px;
+}
+.footer-links-c p:active {
+  color: #2ad1d4;
 }
