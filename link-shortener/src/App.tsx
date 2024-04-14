@@ -1,7 +1,14 @@
 import "./App.css";
 import working from "../../images/illustration-working.svg";
 import Navbar from "./components/Navbar";
-import bgShorten from "../../images/bg-shorten-desktop.svg";
+import BrandRecognitionIcon from "../../images/icon-brand-recognition.svg";
+import DetailedRecordsIcon from "../../images/icon-detailed-records.svg";
+import FullyCustomizableIcon from "../../images/icon-fully-customizable.svg";
+import logo from "../../images/logo.svg";
+import facebookIcon from "../../images/icon-facebook.svg";
+import instagramIcon from "../../images/icon-instagram.svg";
+import pinterestIcon from "../../images/icon-pinterest.svg";
+import twitterIcon from "../../images/icon-twitter.svg";
 
 function App() {
   return (
@@ -25,11 +32,91 @@ function App() {
           </div>
         </div>
         <div className="middle">
-          <img className="bg-shorten" src={bgShorten} alt=""></img>
-          <input type="text" />
-          <h3>input</h3>
+          <div className="bg-shortendiv">
+            <div className="input-container">
+              <input
+                placeholder="Shorten a link here..."
+                className="shorten-input"
+                type="text"
+              />
+              <button className="shorten-btn">Shorten It!</button>
+            </div>
+          </div>
         </div>
-        <div className="lower">lower</div>
+        <div className="lower">
+          <div className="advanced-stats">
+            <h1>Advanced Statistics</h1>
+            <p>
+              Track how your links are performing across the web with our
+              advanced statistics dashboard.
+            </p>
+          </div>
+          <div className="three-boxes">
+            <div id="card1" className="card">
+              <img className="lower-icon" src={BrandRecognitionIcon} alt="" />
+              <h4>Brand Recognition</h4>
+              <p>
+                Boost your brand recognition with each click. Generic links
+                don't mean a thing. Branded links help instil confidence in your
+                content.
+              </p>
+            </div>
+            <div className="blue-line"></div>
+            <div id="card2" className="card">
+              <img className="lower-icon" src={DetailedRecordsIcon} alt="" />
+              <h4>Detailed Records</h4>
+              <p>
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better
+                decisions.
+              </p>
+            </div>
+            <div className="blue-line2"></div>
+
+            <div id="card3" className="card">
+              <img className="lower-icon" src={FullyCustomizableIcon} alt="" />
+              <h4>Fully Customizable</h4>
+              <p>
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="lower-get-started">
+          <h1>Boost your links today</h1>
+          <button className="lower-get-started-btn">Get Started</button>
+        </div>
+        <div className="footer">
+          <img src={logo} alt="" />
+          <div className="footer-links-c">
+            <div className="features-c">
+              <h5>Features</h5>
+              <p>Link Shortening</p>
+              <p>Branded Links</p>
+              <p>Analytics</p>
+            </div>
+            <div className="resources-c">
+              <h5>Resources</h5>
+              <p>Blog</p>
+              <p>Developers</p>
+              <p>Support</p>
+            </div>
+            <div className="company-c">
+              <h5>Company</h5>
+              <p>About</p>
+              <p>Our Team</p>
+              <p>Careers</p>
+              <p>Contact</p>
+            </div>
+          </div>
+          <div className="icons">
+            <img src={facebookIcon} alt="facebook" />
+            <img src={twitterIcon} alt="twitter" />
+            <img src={pinterestIcon} alt="pinterest" />
+            <img src={instagramIcon} alt="instagram" />
+          </div>
+        </div>
       </div>
     </>
   );

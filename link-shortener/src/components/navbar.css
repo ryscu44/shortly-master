@@ -6,7 +6,7 @@
   height: 80px;
   width: 100%;
   background: rgb(255, 255, 255);
-  box-shadow: 00px 10px 4px #b5b5b9;
+  /* box-shadow: 00px 10px 4px #b5b5b9; */
 }
 
 .left {
@@ -19,10 +19,25 @@
 .logo {
   height: 35px;
   margin-right: 35px;
-  margin-left: 155px;
+  margin-left: 375px;
   cursor: pointer;
 }
 .header-text {
   margin: 0px 15px 0px;
   cursor: pointer;
+  color: #878789;
+}
+
+.right {
+  position: relative;
+  left: 660px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up-btn {
+  background-color: #2ad1d4;
+  color: white;
+  border-radius: 25px;
+  width: 110px;
 }
