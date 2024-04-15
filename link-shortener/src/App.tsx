@@ -22,6 +22,10 @@ function App() {
   };
 
   const handleSubmit = async () => {
+    let urlInput = input.trim(); // Remove leading/trailing spaces
+    if (!urlInput.startsWith("http://") && !urlInput.startsWith("https://")) {
+      urlInput = "https://" + urlInput; // Prepend "https://" if missing
+    }
     const options = {
       method: "POST",
       headers: {
@@ -30,7 +34,7 @@ function App() {
         "X-RapidAPI-Host": "url-shortener-service.p.rapidapi.com",
       },
       body: new URLSearchParams({
-        url: `${input}`,
+        url: `${urlInput}`,
       }),
     };
 

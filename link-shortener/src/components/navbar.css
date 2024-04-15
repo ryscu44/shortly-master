@@ -23,7 +23,7 @@
 .logo {
   height: 35px;
   margin-right: 35px;
-  margin-left: 375px;
+  margin-left: 475px;
   cursor: pointer;
 }
 .header-text {
@@ -34,7 +34,7 @@
 
 .right {
   position: relative;
-  left: 660px;
+  left: 750px;
   display: flex;
   justify-content: center;
   align-items: center;

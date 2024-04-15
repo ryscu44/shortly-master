@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: left;
   align-items: left;
-  margin: 125px 385px 0px;
+  margin: 125px 485px 0px;
 }
 .upper-left {
   display: flex;
@@ -55,9 +55,9 @@ border-color: #3a3052;
 }
 .working {
   position: absolute;
-  width: 800px;
+  width: 850px;
   top: 170px;
-  left: 1200px;
+  left: 1300px;
 }
 .middle {
   display: flex;
@@ -78,7 +78,7 @@ border-color: #3a3052;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  width: 63%;
+  width: 60%;
   height: 60%;  
   background-color: #3a3053;
   background-image: url("../../images/bg-shorten-desktop.svg");
@@ -162,9 +162,13 @@ padding-left: 0px;
 }
 
 .three-boxes {
+  position: relative;
+  left: 10px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 155px;
-  margin: 155px 350px 0px;
+  margin: 155px 250px 0px;
 }
 
 .three-boxes h4 {
@@ -201,8 +205,8 @@ padding-left: 0px;
   height: 10px;
   width: 40px;
   position: absolute;
-  top: 1560px;
-  left: 795px;
+  top: 177px;
+  left: 675px;
   margin: 0px;
 }
 .blue-line2 {
@@ -210,8 +214,8 @@ padding-left: 0px;
   height: 10px;
   width: 40px;
   position: absolute;
-  top: 1560px;
-  left: 1265px;
+  top: 177px;
+  left: 1140px;
   margin: 0px;
 }
 
@@ -222,7 +226,7 @@ padding-left: 0px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 250px;
+  margin-top: 150px;
   height: 300px;
 }
 .lower-get-started h1 {
