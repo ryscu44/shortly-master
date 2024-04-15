@@ -13,23 +13,38 @@ import { useState } from "react";
 
 function App() {
   const [input, setInput] = useState("");
-  const encodedURI = encodeURI(input);
+  const [links, setLinks] = useState<{ input: string; result: any }[]>([]);
 
-  const handleSubmit = async () => {
-    fetch("https://cleanuri.com/api/v1/shorten", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: `url=${encodedURI}`,
-    });
-    try {
-      const response = await fetch("https://cleanuri.com/api/v1/shorten");
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
+  const url = "https://url-shortener-service.p.rapidapi.com/shorten";
+
+  const copyClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
   };
 
+  const handleSubmit = async () => {
+    const options = {
+      method: "POST",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded",
+        "X-RapidAPI-Key": "1b5e622e55msh647ddfdffcd7b5bp16c9c5jsn6baa18e57d63",
+        "X-RapidAPI-Host": "url-shortener-service.p.rapidapi.com",
+      },
+      body: new URLSearchParams({
+        url: `${input}`,
+      }),
+    };
+
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      const newItem = { input, result };
+      setLinks([...links, newItem]);
+      console.log(links);
+      setInput("");
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <>
       <div className="container">
@@ -54,6 +69,7 @@ function App() {
           <div className="bg-shortendiv">
             <div className="input-container">
               <input
+                name="urlInput"
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Shorten a link here..."
                 className="shorten-input"
@@ -66,6 +82,25 @@ function App() {
             </div>
           </div>
         </div>
+        <div className="link-container">
+          {links.map((link, index) => (
+            <div className="link-item" key={index}>
+              <div className="left">
+                <h2>{link.input}</h2>
+              </div>
+              <div className="right">
+                <h2 className="shortlink">{link.result.result_url}</h2>
+                <button
+                  onClick={() => copyClipboard(link.result.result_url)}
+                  className="shorten-btn"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div className="lower">
           <div className="advanced-stats">
             <h1>Advanced Statistics</h1>
