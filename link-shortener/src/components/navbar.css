@@ -54,3 +54,8 @@
 border-width: 0px;
 border-color: #3a3052;
 }
+
+.sign-up-btn:hover {
+  transition: all 0.4s ease;
+  opacity: 0.85;
+}

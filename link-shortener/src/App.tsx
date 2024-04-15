@@ -89,14 +89,12 @@ function App() {
         <div className="link-container">
           {links.map((link, index) => (
             <div className="link-item" key={index}>
-              <div className="left">
-                <h2>{link.input}</h2>
-              </div>
-              <div className="right">
+              <h2>{link.input}</h2>
+              <div className="right-links">
                 <h2 className="shortlink">{link.result.result_url}</h2>
                 <button
                   onClick={() => copyClipboard(link.result.result_url)}
-                  className="shorten-btn"
+                  className="copy-btn"
                 >
                   Copy
                 </button>
