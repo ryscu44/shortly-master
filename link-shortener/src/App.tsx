@@ -91,7 +91,9 @@ function App() {
             <div className="link-item" key={index}>
               <h2>{link.input}</h2>
               <div className="right-links">
-                <h2 className="shortlink">{link.result.result_url}</h2>
+                <a href={link.result.result_url} target="_blank">
+                  <h2 className="shortlink">{link.result.result_url}</h2>
+                </a>
                 <button
                   onClick={() => copyClipboard(link.result.result_url)}
                   className="copy-btn"
